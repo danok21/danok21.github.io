@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="[&quot;en&quot;,&quot;zh-TW&quot;,&quot;default&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>代码格式化配置 | NOTES</title><meta name="author" content="Huan"><meta name="copyright" content="Huan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="开发工具 vsCode 之代码风格配置下载 vsCodeEditorConfigDocs安装在vscode plugin market 中搜索 editorConfig 进行安装   配置进入项目root目录下手动创建 .editorconfig 文件(右键鼠标，点击 Generate .editorconfig 选项, 可自动创建该配置文件), 并根据需求配置以下选项。 123456789101">
+<meta property="og:type" content="article">
+<meta property="og:title" content="代码格式化配置">
+<meta property="og:url" content="https://danok21.github.io/archives/dc8644ca.html">
+<meta property="og:site_name" content="NOTES">
+<meta property="og:description" content="开发工具 vsCode 之代码风格配置下载 vsCodeEditorConfigDocs安装在vscode plugin market 中搜索 editorConfig 进行安装   配置进入项目root目录下手动创建 .editorconfig 文件(右键鼠标，点击 Generate .editorconfig 选项, 可自动创建该配置文件), 并根据需求配置以下选项。 123456789101">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://picsum.photos/1920/1080?random=2%22">
+<meta property="article:published_time" content="2020-11-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-03T01:28:14.870Z">
+<meta property="article:author" content="Huan">
+<meta property="article:tag" content="代码风格配置">
+<meta property="article:tag" content="vsCode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picsum.photos/1920/1080?random=2%22"><link rel="shortcut icon" href="/./assets/avatar.png"><link rel="canonical" href="https://danok21.github.io/archives/dc8644ca.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":213},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '代码格式化配置',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-03 09:28:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./assets/avatar2.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://picsum.photos/1920/1080?random=2&quot;')"><nav id="nav"><span id="blog-info"><a href="/" title="NOTES"><span class="site-name">NOTES</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">代码格式化配置</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">Created</span><time datetime="2020-11-19T16:00:00.000Z" title="Created 2020-11-20 00:00:00">2020-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Config/">Config</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>4min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="代码格式化配置"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="开发工具-vsCode-之代码风格配置"><a href="#开发工具-vsCode-之代码风格配置" class="headerlink" title="开发工具 vsCode 之代码风格配置"></a>开发工具 vsCode 之代码风格配置</h1><h2 id="下载-vsCode"><a href="#下载-vsCode" class="headerlink" title="下载 vsCode"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">下载 vsCode</a></h2><h2 id="EditorConfig"><a href="#EditorConfig" class="headerlink" title="EditorConfig"></a>EditorConfig</h2><h3 id="Docs"><a href="#Docs" class="headerlink" title="Docs"></a><a target="_blank" rel="noopener" href="https://editorconfig.org/">Docs</a></h3><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在vscode plugin market 中搜索 editorConfig 进行安装</p>
+<img src="/archives/dc8644ca/installEditorConfig.png" class="">
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>进入项目root目录下手动创建 .editorconfig 文件(右键鼠标，点击 Generate .editorconfig 选项, 可自动创建该配置文件), 并根据需求配置以下选项。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># EditorConfig is awesome: https://EditorConfig.org</span><br><span class="line"></span><br><span class="line"># top-most EditorConfig file</span><br><span class="line">root = true</span><br><span class="line"></span><br><span class="line"># 指定对该配置生效的文件</span><br><span class="line">[*.&#123;js,jsx,ts,tsx,vue,md&#125;]</span><br><span class="line"></span><br><span class="line"># 缩进风格 space / tab</span><br><span class="line">indent_style = space</span><br><span class="line"></span><br><span class="line"># 缩进的大小</span><br><span class="line">indent_size = 2</span><br><span class="line"></span><br><span class="line"># 换行符 lf / cr / crlf</span><br><span class="line">end_of_line = lf</span><br><span class="line"></span><br><span class="line"># 字符编码格式</span><br><span class="line">charset = utf-8</span><br><span class="line"></span><br><span class="line"># 是否删除每行末尾的空格</span><br><span class="line">trim_trailing_whitespace = false</span><br><span class="line"></span><br><span class="line"># 是否文件最后一行插入换行符，并换行到下一行</span><br><span class="line">insert_final_newline = false</span><br></pre></td></tr></table></figure>
+
+<h2 id="Prettier"><a href="#Prettier" class="headerlink" title="Prettier"></a>Prettier</h2><h3 id="Docs-1"><a href="#Docs-1" class="headerlink" title="Docs"></a><a target="_blank" rel="noopener" href="https://prettier.io/docs/en/index.html">Docs</a></h3><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>在vscode plugin market 中搜索 prettier 进行安装</p>
+<img src="/archives/dc8644ca/installPrettier.png" class="">
+
+<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p>在项目根目录下创建 .prettierrc 文件，添加配置项，参考如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;#&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://prettier.io/docs&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#1&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否使用制表符缩进, 默认值: false(空格缩进)&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;useTabs&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#2&quot;</span><span class="punctuation">:</span> <span class="string">&quot;缩进的空格数, 默认值: 2&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tabWidth&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#3&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否在语句的末尾使用分号, 默认值: true&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;semi&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#4&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否使用单引号, 默认值: false(双引号)&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;singleQuote&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#5&quot;</span><span class="punctuation">:</span> <span class="string">&quot;每行语句的最大字符长度, 超出后自动换行, 默认值: 80&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;printWidth&quot;</span><span class="punctuation">:</span> <span class="number">100</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#6&quot;</span><span class="punctuation">:</span> <span class="string">&quot;在JSX中是否使用单引号, 默认值: false(双引号)&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;jsxSingleQuote&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#7&quot;</span><span class="punctuation">:</span> <span class="string">&quot;多行逗号分隔的语句结构中是否添加尾随逗号, 默认值: es5(对象, 数组). none 表示不添加, all 表示尽可能在后面添加逗号（包括函数参数）&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;trailingComma&quot;</span><span class="punctuation">:</span> <span class="string">&quot;none&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#8&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否使用引号包裹, 默认值: as-needed&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;quoteProps&quot;</span><span class="punctuation">:</span> <span class="string">&quot;as-needed&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#9&quot;</span><span class="punctuation">:</span> <span class="string">&quot;单个参数的箭头函数是否添加括号, 默认值: always(添加括号). avoid 表示尽可能的省略括号&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;arrowParens&quot;</span><span class="punctuation">:</span> <span class="string">&quot;always&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#10&quot;</span><span class="punctuation">:</span> <span class="string">&quot;换行格式, 默认值: lf. lf 表示仅换行(\n) 用于 Macos, Linux, cr 表示仅回车(\r) 不常用, crlf 表示回车+换行(\r\n) 用于 Windows&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;endOfLine&quot;</span><span class="punctuation">:</span> <span class="string">&quot;lf&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#11&quot;</span><span class="punctuation">:</span> <span class="string">&quot;花括号内的两边是否添加空格, 默认值: true&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;bracketSpacing&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#12&quot;</span><span class="punctuation">:</span> <span class="string">&quot;代码格式化的开始位置, 默认值: 0(文件开头)&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;rangeStart&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#13&quot;</span><span class="punctuation">:</span> <span class="string">&quot;代码格式化的结束位置, 默认值: null(文件结尾)&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;rangeEnd&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#14&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否换行, 默认值: preserve. always 表示超出设置的单行最大字符长度后自动换行, never 表示不换行&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;proseWrap&quot;</span><span class="punctuation">:</span> <span class="string">&quot;preserve&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#16&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否只格式化包含 @format 、 @prettier 头的文件, 默认值: false&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;requirePragma&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#17&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否在文件开头自动插入 @format 注释, 默认值: false&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;insertPragma&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#18&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否将包含多行JSX代码标签的 &gt; 符号放在最后一行的末尾(适用于非自闭合元素), 默认值: false&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;jsxBracketSameLine&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#19&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否缩进Vue文件中的脚本,样式和标签, 默认值: false&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;vueIndentScriptAndStyle&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#20&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HTML文件中空白的敏感度, 默认值: css&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;htmlWhitespaceSensitivity&quot;</span><span class="punctuation">:</span> <span class="string">&quot;css&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;#21&quot;</span><span class="punctuation">:</span> <span class="string">&quot;是否自动识别代码文件, 默认值: auto&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;embeddedLanguageFormatting&quot;</span><span class="punctuation">:</span> <span class="string">&quot;auto&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="保存后自动格式代码"><a href="#保存后自动格式代码" class="headerlink" title="保存后自动格式代码"></a>保存后自动格式代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">打开 vscode 的设置(command键 + ,), 搜索 &quot;editor:format&quot;,</span><br><span class="line">将 Default Formatter 设置为 &quot;Prettier - Code Formatter&quot; 并将选项 &quot;Format On Save&quot; 选中。</span><br></pre></td></tr></table></figure>
+<img src="/archives/dc8644ca/formatOnSave.png" class="">
+
+<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><h4 id=""><a href="#" class="headerlink" title=""></a><a href="/archives/9b9637ae.html" title=".gitignore 文件编写规则">.gitignore 文件编写规则</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在 root 目录下创建 .prettierignore 指定忽略规则（规则与 gitignore 一致）</span><br></pre></td></tr></table></figure>
+
+<h3 id="Nodejs-项目中使用"><a href="#Nodejs-项目中使用" class="headerlink" title="Nodejs 项目中使用"></a>Nodejs 项目中使用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">安装 prettier 工具包</span><br><span class="line">npm i prettier -D 或</span><br><span class="line">yarn add prettier -D</span><br><span class="line"></span><br><span class="line">在项目根目录下的 package.json 文件中添加脚本命令 &quot;prettier&quot;: &quot;prettier --write pathname&quot;。</span><br><span class="line">执行命令 npm run prettier 或 yarn prettier 对指定 pathname 下的文件或目录进行代码格式化。</span><br></pre></td></tr></table></figure>
+
+<h3 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h3></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://danok21.github.io">Huan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://danok21.github.io/archives/dc8644ca.html">https://danok21.github.io/archives/dc8644ca.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E9%85%8D%E7%BD%AE/">代码风格配置</a><a class="post-meta__tags" href="/tags/vsCode/">vsCode</a></div><div class="post_share"><div class="social-share" data-image="https://picsum.photos/1920/1080?random=2&quot;" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/9b9637ae.html" title=".gitignore 文件编写规则"><img class="cover" src="https://picsum.photos/1920/1080?random=3" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">.gitignore 文件编写规则</div></div></a></div><div class="next-post pull-right"><a href="/archives/a68133d5.html" title="Vue 判断图片是否加载完成"><img class="cover" src="https://picsum.photos/1920/1080?random=5" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Vue 判断图片是否加载完成</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./assets/avatar2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Huan</div><div class="author-info__description">Youth is to live yourself</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/danok21"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/danok21" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/twone.40954@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Personal Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-vsCode-%E4%B9%8B%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">开发工具 vsCode 之代码风格配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD-vsCode"><span class="toc-number">1.1.</span> <span class="toc-text">下载 vsCode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EditorConfig"><span class="toc-number">1.2.</span> <span class="toc-text">EditorConfig</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Docs"><span class="toc-number">1.2.1.</span> <span class="toc-text">Docs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.3.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prettier"><span class="toc-number">1.3.</span> <span class="toc-text">Prettier</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Docs-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">Docs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-1"><span class="toc-number">1.3.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="toc-number">1.3.3.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98%E5%90%8E%E8%87%AA%E5%8A%A8%E6%A0%BC%E5%BC%8F%E4%BB%A3%E7%A0%81"><span class="toc-number">1.3.4.</span> <span class="toc-text">保存后自动格式代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.5.</span> <span class="toc-text">忽略文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.3.5.1.</span> <span class="toc-text">.gitignore 文件编写规则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nodejs-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.6.</span> <span class="toc-text">Nodejs 项目中使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ESLint"><span class="toc-number">1.3.7.</span> <span class="toc-text">ESLint</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/6c8974cc.html" title="Div元素水平垂直居中的方法"><img src="https://picsum.photos/1920/1080?random=6" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Div元素水平垂直居中的方法"/></a><div class="content"><a class="title" href="/archives/6c8974cc.html" title="Div元素水平垂直居中的方法">Div元素水平垂直居中的方法</a><time datetime="2020-11-25T07:11:09.000Z" title="Created 2020-11-25 15:11:09">2020-11-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/1a92dcc6.html" title="滚动条样式设置"><img src="https://picsum.photos/1920/1080?random=0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="滚动条样式设置"/></a><div class="content"><a class="title" href="/archives/1a92dcc6.html" title="滚动条样式设置">滚动条样式设置</a><time datetime="2020-11-24T09:11:01.000Z" title="Created 2020-11-24 17:11:01">2020-11-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/45181957.html" title="Javascript 正则表达式"><img src="https://picsum.photos/1920/1080?random=4" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Javascript 正则表达式"/></a><div class="content"><a class="title" href="/archives/45181957.html" title="Javascript 正则表达式">Javascript 正则表达式</a><time datetime="2020-11-23T04:09:01.000Z" title="Created 2020-11-23 12:09:01">2020-11-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/9b9637ae.html" title=".gitignore 文件编写规则"><img src="https://picsum.photos/1920/1080?random=3" onerror="this.onerror=null;this.src='/img/404.jpg'" alt=".gitignore 文件编写规则"/></a><div class="content"><a class="title" href="/archives/9b9637ae.html" title=".gitignore 文件编写规则">.gitignore 文件编写规则</a><time datetime="2020-11-20T16:00:00.000Z" title="Created 2020-11-21 00:00:00">2020-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/dc8644ca.html" title="代码格式化配置"><img src="https://picsum.photos/1920/1080?random=2&quot;" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="代码格式化配置"/></a><div class="content"><a class="title" href="/archives/dc8644ca.html" title="代码格式化配置">代码格式化配置</a><time datetime="2020-11-19T16:00:00.000Z" title="Created 2020-11-20 00:00:00">2020-11-20</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://picsum.photos/1920/1080?random=2&quot;')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Huan</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="2235097256" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-order="random"> </div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
